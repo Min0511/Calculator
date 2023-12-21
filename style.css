@@ -1,0 +1,49 @@
+*{
+    box-sizing: border-box;
+}
+
+
+body{
+    display : flex;
+    height : 100vh;
+    justify-content: center;
+    align-items: center;
+    margin : 0;
+}
+div{
+    text-align : center;
+}
+.container{
+    display :flex;
+    flex-direction: column;
+    flex-shrink : 0;
+    border : 5px solid rgba(8, 8, 8, 0.699);
+    height : 500px;
+    width : 400px;
+    border-radius: 15% 15% 20% 20%;
+}
+
+.screen{
+    border : 2px solid black;
+    padding : 20px;
+    margin : 30px;
+    margin-bottom : 20px;
+    height : 50px;;
+    text-align : end;
+}
+.numberContainer{
+    gap : 10px;
+}
+button{
+    width : 80px;
+    height : 80px;
+    gap : 10px;
+}
+.resetDelete{
+    width : 165px;
+    height : 40px;
+}
+
+.pressedButton{
+    background-color : rgb(92, 90, 90)
+}
