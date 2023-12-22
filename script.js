@@ -7,6 +7,7 @@ const del = document.querySelector(".delete");
 const equal = document.querySelector(".equal")
 const symbols = document.querySelectorAll(".sym");
 const symsArray = Array.from(symbols);
+const dot = document.querySelector(".dot");
 let storedNumber = null;
 let storedSym = null
 
@@ -32,9 +33,7 @@ symsArray.forEach((sym)=>{
 
         sym.classList.add("pressedButton");
         let getNumber = Number(screen.textContent);
-        
-        console.log(storedSym)
-        console.log(storedNumber)
+
         if(storedNumber !== null){
             switch(storedSym){
                 case "+":
@@ -82,10 +81,15 @@ equal.addEventListener("click",() => {
 reset.addEventListener("click",() => {
     storedNumber = null;
     screen.textContent = "0";
-})
+});
 del.addEventListener("click", () => {
     screen.textContent = screen.textContent.slice(0,screen.textContent.length -1)
     
-})
+});
 
-console.log(screen.textContent)
+dot.addEventListener("click",() => {
+    if(!screen.textContent.includes(".")){
+        screen.textContent += dot.textContent;
+    }
+
+});
